@@ -9,7 +9,8 @@ app.use('/places', require('./controllers/places'))
 
 app.get('/', (req, res) => {
     // res.send('Hello world!')
-    res.render('home')
+    // res.render('home')
+    res.render('error404')
 })
 
 app.get('*', (req, res) => {
