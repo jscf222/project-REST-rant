@@ -5,6 +5,7 @@ const Def = require('../default.jsx')
 
 
 function edit_form (data){
+  
     return(
         <Def>
             <main>
@@ -16,8 +17,8 @@ function edit_form (data){
           <input id="name"  name='name' value={data.place.name}/>
       </div>
       <div className="form-group col-sm-6">
-          <label htmlFor="pic">Place Picture</label>
-          <input id="pic"  />
+      <label htmlFor="pic">Place Picture</label>
+    <input  id="pic" name="pic" />
       </div>
   </div>
       

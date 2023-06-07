@@ -64,7 +64,7 @@ router.get('/:id/edit',(req,res) =>{
   }
   else{
 
-      res.render('places/edit',{place: places[id]})
+      res.render('places/edit',{place: places[id],id:id})
   }
 
   
@@ -73,9 +73,8 @@ router.get('/:id/edit',(req,res) =>{
 
 router.put('/:id', (req, res) => {
   let id = Number(req.params.id)
-  console.log(id)
-  places[id] = req.body
-  res.redirect(`/places/${id}`)
+ 
+ 
   if (isNaN(id)) {
       res.render('error404')
   }
@@ -94,9 +93,10 @@ router.put('/:id', (req, res) => {
       if (!req.body.state) {
           req.body.state = 'USA'
       }
-
+ 
       // Save the new data into places[id]
-     
+     places[id] = req.body
+  res.redirect(`/places/${id}`)
   }
 })
 
