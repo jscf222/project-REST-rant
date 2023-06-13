@@ -6,9 +6,10 @@
 // })
 const router = require('express').Router()
 const db = require('../models')
+const places = require('../models/places')
 
 router.get('/', (req, res) => {
-    db.Place.find()
+    db.Place.find(places)
     .then((places) => {
       res.render('places/index', { places })
     })
@@ -17,7 +18,7 @@ router.get('/', (req, res) => {
       res.render('error404')
     })
 })
-
+//create
 router.post('/', (req, res) => {
   db.Place.create(req.body)
   .then(() => {
