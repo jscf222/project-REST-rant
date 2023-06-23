@@ -12,7 +12,7 @@ h1 {
     margin-left: 20px;
     background-color: white;
   }
-  
+
   nav{
     background-color: cornflowerblue;
     padding: 10px;
@@ -39,5 +39,6 @@ h1 {
     text-decoration: none;
   }
   img{
+   
     width: 400px;
   }
